@@ -1,0 +1,5 @@
+src/main/resources/application-poc.properties
+src/main/resources/application-own.properties
+src/main/resources/application-java.properties
+pom_bck.xml
+pom2.xml

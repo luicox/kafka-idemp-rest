@@ -1,0 +1,192 @@
+{
+  "doc": "Datos monetarios de movimientos de cuenta (datos DAC encriptados)",
+  "fields": [
+    {
+      "doc": "Cuenta formato comercial encriptado",
+      "name": "accountNumber",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Estado de cuenta final",
+      "name": "finalAccountStatus",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Monto de Operación (se obtiene de la diferencia entre saldo final-saldo inicial)",
+      "name": "movementAmount",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Balance final disponible",
+      "name": "finalBalance",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Hora de operación (formato HH:MM:SS)",
+      "name": "movementTime",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Fecha de operación (formato DDMMAAAA)",
+      "name": "movementDate",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Identificador de terminal",
+      "name": "termId",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Valor CARU",
+      "name": "tbr",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Código de Transacción",
+      "name": "transactionCode",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Usuario que realizo la operacion",
+      "name": "operationUser",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Flag de operación en next day (0=horario de oficina, 1=horario en nextday)",
+      "name": "flagNextDay",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Fecha Valuta (backdate) (formato DDMMAAAA)",
+      "name": "valutaDate",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Descripción de la transacción (glosa)",
+      "name": "operationReference",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Sucursal-Agencia Operativa",
+      "name": "agencyBranchCode",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Identifica el número de transacción que permitirá conciliar la información que viene del tópico azc-apsy-account-movements (verde) y del tópico azc-apsy-virtual-account-movements (amarillo)",
+      "name": "operationNumber",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Flag de extorno",
+      "name": "extorno",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Flag de debito o credito",
+      "name": "operationType",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Valores del origen de la transaccion",
+      "name": "trxOrigin",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Codigo del producto",
+      "name": "productCode",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Correlation Id",
+      "name": "correlationId",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Canal",
+      "name": "channel",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Request Header encriptado",
+      "name": "requestHeader",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    },
+    {
+      "doc": "Request Body encriptado",
+      "name": "requestBody",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    }
+  ],
+  "name": "StandinAccountMovements",
+  "namespace": "com.luico.apsy.standinaccountmovements.model.avro",
+  "type": "record"
+}

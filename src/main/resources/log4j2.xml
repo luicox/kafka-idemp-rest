@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Consola -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{HH:mm:ss}] [%-5level] %C{1} - %msg%n"/>
+        </Console>
+
+        <!-- Archivo de logs -->
+        <File name="FileLogger" fileName="logs/deduplication.log" append="true">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}] [%-5level] %c - %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logs de Kafka client -->
+        <Logger name="org.apache.kafka" level="ERROR" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+        <Logger name="io.confluent.parallelconsumer.state.ProcessingShard" level="OFF" additivity="false"/>
+
+
+        <!-- Tu aplicación -->
+        <Logger name="com.luico" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <Logger name="pl.tlinkowski.unij" level="OFF" additivity="false"/>
+        <Logger name="io.confluent.parallelconsumer.state.ProcessingShard" level="OFF" additivity="false"/>
+
+        <!-- Root: todo lo demás -->
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+
+
+    </Loggers>
+</Configuration>
